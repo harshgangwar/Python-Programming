@@ -73,20 +73,32 @@
 # print re
 
 
-# Functions
-# def
+# # Functions
+# # def
+#
+# # 'filter' Functions
+# ls = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#
+# # can be replaced by lamda function
+# def even_bool(num):
+#     return num%2 == 0
+#
+# # lamba expression
+# evens = filter(lambda num: num%2 == 0, ls)
+#
+# # filter
+# #evens = filter(even_bool, ls) #takes 2 args first is functios and sec list/tuple/string
 
-# 'filter' Functions
-ls = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#print evens
 
-# can be replaced by lamda function
-def even_bool(num):
-    return num%2 == 0
+# Pthon Functions
+st = "Love Cricket! #I'm a fast bowler"
+# re = split() # by default split by space
+# re = st.split('#')
+# accessing 1st element
+re = st.split('#')[1]
+print re
 
-# lamba expression
-evens = filter(lambda num: num%2 == 0, ls)
-
-# filter
-#evens = filter(even_bool, ls) #takes 2 args first is functios and sec list/tuple/string
-
-print evens
+# 'in' operator
+print ('x' in [1,2,3]) # result would be False
+print ('x' in [1,2,3,'x']) # result would be True
