@@ -160,12 +160,35 @@
 # print x
 
 # But we should avoid global variable, should use return instead
-x = 30
+# x = 30
+#
+# def func():
+#     x = 60
+#     return x
+#
+# print x
+# x = func()
+# print x
 
-def func():
-    x = 60
-    return x
+# Oops
+# In python everything is in form of object
+# class Sample():
+#     pass
+#
+# x = Sample()
+#
+# print x
+# print type(x)
 
-print x
-x = func()
-print x    
+class Dog:
+
+    # class object attribute
+    species = "mammal"
+
+    def __init__(self, breed):
+        self.breed = breed
+
+myDog = Dog(breed = "Lab")
+# or myDog = Dog("Lab")
+print myDog.breed
+print myDog.species
