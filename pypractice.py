@@ -91,14 +91,81 @@
 
 #print evens
 
-# Pthon Functions
-st = "Love Cricket! #I'm a fast bowler"
-# re = split() # by default split by space
-# re = st.split('#')
-# accessing 1st element
-re = st.split('#')[1]
-print re
+# Python Functions
+# st = "Love Cricket! #I'm a fast bowler"
+# # re = split() # by default split by space
+# # re = st.split('#')
+# # accessing 1st element
+# result = st.split('#')[1]
+# print result
+#
+# # 'in' operator
+# print ('x' in [1,2,3]) # result would be False
+# print ('x' in [1,2,3,'x']) # result would be True
 
-# 'in' operator
-print ('x' in [1,2,3]) # result would be False
-print ('x' in [1,2,3,'x']) # result would be True
+# return True if seq. of no. 1,2,3
+
+# def arrCheck(arr):
+#     for i in range(len(arr)-2):
+#         if arr[i] ==1 and arr[i+1] ==2 and arr[i+2] == 3:
+#             return True
+#     return False
+
+# Python Level Two
+# Scope
+# LEGB Rule
+
+# x = 25
+# def my_func():
+#     x = 50
+#     return x
+# #
+# # print x #25
+# # print my_func() #50
+#
+# my_func()
+# print x #25
+
+# Enclosing Local Function
+# name = "a global name"
+#
+# def greet():
+#     name = "sammy"
+#     def hel():
+#         print name  #sammy
+#     hel()
+#
+# greet()
+# print name #a global name
+
+
+# name = "a global name"
+#
+# def greet():
+#     def hel():
+#         print name  #a global name
+#     hel()
+#
+# greet()
+
+# Built-in
+# x = 50
+#
+# def func():
+#     global x   #redefined in global namespace
+#     x = 100
+#
+# print x
+# func()
+# print x
+
+# But we should avoid global variable, should use return instead
+x = 30
+
+def func():
+    x = 60
+    return x
+
+print x
+x = func()
+print x    
