@@ -180,15 +180,64 @@
 # print x
 # print type(x)
 
-class Dog:
+# class Dog:
+#
+#     # class object attribute
+#     species = "mammal"
+#
+#     def __init__(self, breed):
+#         self.breed = breed
+#
+# myDog = Dog(breed = "Lab")
+# # or myDog = Dog("Lab")
+# print myDog.breed
+# print myDog.species
 
-    # class object attribute
-    species = "mammal"
+# Inheritance
 
-    def __init__(self, breed):
-        self.breed = breed
+# class Animal:
+#
+#     def __init__(self):
+#         print "Animal"
+#
+#     def whoAmI(self):
+#         print "Animal"
+#
+#     def eat(self):
+#         print "eating"
+#
+# class Dog(Animal):
+#      def __init__(self):
+#         Animal.__init__(self)
+#         print "Dog created"
+#
+#
+# ma = Dog()
+# ma.whoAmI()
+# ma.eat()
 
-myDog = Dog(breed = "Lab")
-# or myDog = Dog("Lab")
-print myDog.breed
-print myDog.species
+# Special Methods
+
+class Book:
+
+    def __init__(self, title, author, page):
+        self.title = title
+        self.author = author
+        self.page = page
+
+    def __str__(self):
+        return "Title: {}, Author: {}".format(self.title, self.author, self.page)
+
+    def __len__(self):
+        return self.page
+
+    def __del__(self):
+        print "b is destroyed"
+
+b = Book("Python", "Harsh", 200)
+
+print b
+
+print len(b)
+
+del b
